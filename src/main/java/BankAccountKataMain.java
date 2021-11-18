@@ -16,5 +16,8 @@ public class BankAccountKataMain {
         accountTransactions.deposit(100);
         accountTransactions.withdrawal(33);
         accountTransactions.deposit(220);
+
+        //Log History
+        accountTransactions.printStatement();
     }
 }

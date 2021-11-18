@@ -33,6 +33,7 @@ public class PrintStatementFeature {
         accountTransactions.deposit(1000);
         accountTransactions.withdrawal(100);
         accountTransactions.deposit(500);
+        accountTransactions.printStatement();
     }
 
     @Test
