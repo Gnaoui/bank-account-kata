@@ -30,5 +30,7 @@ public class AccountTransactions {
         transactions.add(deposit);
     }
 
+    public void withdrawal(int amount) {
+    }
 
 }
