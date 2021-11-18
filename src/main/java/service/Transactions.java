@@ -4,6 +4,7 @@ package service;
 import model.AccountStatement;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Transactions {
@@ -18,8 +19,12 @@ public class Transactions {
         accountStatementList.add(accountStatement);
     }
 
+    /**
+     * Fonction permettant de returner la lists des AccountStatement
+     * @return
+     */
     public List<AccountStatement> all() {
-        return null;
+        return Collections.unmodifiableList(accountStatementList);
     }
 
 }

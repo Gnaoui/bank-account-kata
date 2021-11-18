@@ -26,5 +26,10 @@ public class TransactionsTest {
         AccountStatement withdrawal = new AccountStatement("2021-11-18 18:30", 50);
         transactions.add(deposit);
         transactions.add(withdrawal);
+        List<AccountStatement> accountStatementList = transactions.all();
+
+        Assertions.assertEquals(accountStatementList.size(), 2);
+        Assertions.assertEquals(accountStatementList.get(0), deposit);
+        Assertions.assertEquals(accountStatementList.get(1), withdrawal);
     }
 }

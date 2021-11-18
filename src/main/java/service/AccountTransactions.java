@@ -39,4 +39,11 @@ public class AccountTransactions {
         transactions.add(deposit);
     }
 
+    /**
+     * Fonction permettant d'afficher la liste de statements
+     */
+    public void printStatement() {
+        statementPrinter.print(transactions.all());
+    }
+
 }
