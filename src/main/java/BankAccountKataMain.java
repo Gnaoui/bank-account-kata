@@ -11,7 +11,10 @@ public class BankAccountKataMain {
         AccountTransactions accountTransactions = new AccountTransactions(dateFormatter, transactions, statementPrinter);
 
         accountTransactions.deposit(2000);
+        accountTransactions.withdrawal(200);
+        accountTransactions.withdrawal(175);
         accountTransactions.deposit(100);
+        accountTransactions.withdrawal(33);
         accountTransactions.deposit(220);
     }
 }
