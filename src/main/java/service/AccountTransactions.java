@@ -9,13 +9,25 @@ public class AccountTransactions {
     private Transactions transactions;
     private StatementPrinter statementPrinter;
 
+    /**
+     * Constructer
+     * @param dateFormatter
+     * @param transactions
+     * @param statementPrinter
+     */
     public AccountTransactions(DateFormatter dateFormatter, Transactions transactions, StatementPrinter statementPrinter) {
         this.dateFormatter = dateFormatter;
         this.transactions = transactions;
         this.statementPrinter = statementPrinter;
     }
 
+    /**
+     * Fonction deposit permettant d'ajouter un amount au compte
+     * @param amount
+     */
     public void deposit(int amount) {
+        AccountStatement deposit = new AccountStatement(dateFormatter.dateAsString(), amount);
+        transactions.add(deposit);
     }
 
 
