@@ -18,4 +18,8 @@ public class Transactions {
         accountStatementList.add(accountStatement);
     }
 
+    public List<AccountStatement> all() {
+        return null;
+    }
+
 }
