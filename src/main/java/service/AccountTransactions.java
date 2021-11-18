@@ -30,7 +30,13 @@ public class AccountTransactions {
         transactions.add(deposit);
     }
 
+    /**
+     * Function pour debiter le compte
+     * @param amount
+     */
     public void withdrawal(int amount) {
+        AccountStatement deposit = new AccountStatement(dateFormatter.dateAsString(), -amount);
+        transactions.add(deposit);
     }
 
 }
