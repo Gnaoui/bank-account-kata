@@ -37,4 +37,13 @@ public class AccountTransactionsTest {
         accountTransactions.deposit(500);
         Mockito.verify(transactions).add(Matchers.refEq(depositAccountStatement));
     }
+
+
+    @Test
+    public void withdrawal_transaction_test() {
+        BDDMockito.given(dateFormatter.dateAsString()).willReturn(SYSTEM_DATE);
+        AccountStatement withdrawalAccountStatement = new AccountStatement(SYSTEM_DATE, -300);
+        accountTransactions.withdrawal(300);
+        Mockito.verify(transactions).add(Matchers.refEq(withdrawalAccountStatement));
+    }
 }
